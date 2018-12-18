@@ -1,0 +1,17 @@
+{
+  "name": "google-login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "google-auth-library": "^2.0.1",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^1.0.0"
+  }
+}

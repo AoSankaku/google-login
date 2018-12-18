@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GoogleLogin(ポップアップ/clientサイド)</title>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+</head>
+<body>
+  <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  <div id="email"></div>
+  <div id="img"></div>
+  <script>
+    function onSignIn(googleUser) {
+      const profile = googleUser.getBasicProfile();
+
+      const email = document.createElement('p');
+      email.innerText = profile.getEmail();
+
+      const img = document.createElement('img');
+      img.src = profile.getImageUrl();
+
+      document.getElementById('email').appendChild(email);
+      document.getElementById('img').appendChild(img);
+    }
+  </script>
+</body>
+</html>
